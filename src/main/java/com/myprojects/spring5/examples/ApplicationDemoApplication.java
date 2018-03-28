@@ -1,4 +1,4 @@
-package com.myprojects.spring5.examples.applicationdemo;
+package com.myprojects.spring5.examples;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.myprojects.spring5.examples.applicationdemo;
+package com.myprojects.spring5.examples;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
