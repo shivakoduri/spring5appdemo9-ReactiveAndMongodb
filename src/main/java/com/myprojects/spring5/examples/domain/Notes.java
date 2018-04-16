@@ -1,7 +1,5 @@
 package com.myprojects.spring5.examples.domain;
 
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,21 +9,11 @@ public class Notes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description;
-    private Integer prepTime;
-    private Integer cookTime;
-    private Integer servings;
-    private String source;
-    private String url;
-    private String direction;
-    //todo add
-    //private Difficulty difficulty;
+    @OneToOne
+    private Notes recipe;
 
     @Lob
-    private Byte[] image;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    private Notes notes;
+    private String recipeNotes;
 
     public Long getId() {
         return id;
@@ -35,75 +23,19 @@ public class Notes {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public Notes getRecipe() {
+        return recipe;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setRecipe(Notes recipe) {
+        this.recipe = recipe;
     }
 
-    public Integer getPrepTime() {
-        return prepTime;
+    public String getRecipeNotes() {
+        return recipeNotes;
     }
 
-    public void setPrepTime(Integer prepTime) {
-        this.prepTime = prepTime;
-    }
-
-    public Integer getCookTime() {
-        return cookTime;
-    }
-
-    public void setCookTime(Integer cookTime) {
-        this.cookTime = cookTime;
-    }
-
-    public Integer getServings() {
-        return servings;
-    }
-
-    public void setServings(Integer servings) {
-        this.servings = servings;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public Byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(Byte[] image) {
-        this.image = image;
-    }
-
-    public Notes getNotes() {
-        return notes;
-    }
-
-    public void setNotes(Notes notes) {
-        this.notes = notes;
+    public void setRecipeNotes(String recipeNotes) {
+        this.recipeNotes = recipeNotes;
     }
 }
