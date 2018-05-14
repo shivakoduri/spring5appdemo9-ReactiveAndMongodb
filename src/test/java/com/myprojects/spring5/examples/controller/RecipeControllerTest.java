@@ -2,6 +2,7 @@ package com.myprojects.spring5.examples.controller;
 
 import com.myprojects.spring5.examples.commands.RecipeCommand;
 import com.myprojects.spring5.examples.domain.Recipe;
+import com.myprojects.spring5.examples.exceptions.NotFoundException;
 import com.myprojects.spring5.examples.services.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
@@ -102,6 +103,15 @@ public class RecipeControllerTest {
         verify(recipeService, times(1)).deleteById(anyLong());
     }
 
+
+    @Test
+    public void testGetRecipeNotFound() throws Exception {
+
+        when(recipeService.findById(anyLong())).thenThrow(NotFoundException.class);
+
+        mockMvc.perform(get("/recipe/1/show"))
+                .andExpect(status().isNotFound());
+    }
 
 
 }
