@@ -112,8 +112,8 @@ public class RecipeServiceImplTest {
 
     }
 
-    @Test(expected = NumberFormatException.class)
-    public void getRecipeIdTestNumberFormatException() throws Exception {
-        recipeService.findById(Long.valueOf("asd"));
-    }
+//    @Test(expected = NumberFormatException.class)
+//    public void getRecipeIdTestNumberFormatException() throws Exception {
+//        recipeService.findById(Long.valueOf("asd"));
+//    }
 }
