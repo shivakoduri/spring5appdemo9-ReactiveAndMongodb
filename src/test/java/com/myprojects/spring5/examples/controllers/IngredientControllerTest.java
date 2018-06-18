@@ -1,4 +1,4 @@
-package com.myprojects.spring5.examples.controller;
+package com.myprojects.spring5.examples.controllers;
 
 import com.myprojects.spring5.examples.commands.IngredientCommand;
 import com.myprojects.spring5.examples.commands.RecipeCommand;

@@ -1,4 +1,4 @@
-package com.myprojects.spring5.examples.controller;
+package com.myprojects.spring5.examples.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

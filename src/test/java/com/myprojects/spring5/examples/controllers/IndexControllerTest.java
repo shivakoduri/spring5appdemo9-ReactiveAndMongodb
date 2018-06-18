@@ -1,11 +1,10 @@
-package com.myprojects.spring5.examples.controller;
+package com.myprojects.spring5.examples.controllers;
 
 import com.myprojects.spring5.examples.domain.Recipe;
 import com.myprojects.spring5.examples.services.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
-import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
