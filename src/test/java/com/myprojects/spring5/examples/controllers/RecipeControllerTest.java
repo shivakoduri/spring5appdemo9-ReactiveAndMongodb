@@ -5,6 +5,7 @@ import com.myprojects.spring5.examples.domain.Recipe;
 import com.myprojects.spring5.examples.exceptions.NotFoundException;
 import com.myprojects.spring5.examples.services.RecipeService;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -137,6 +138,7 @@ public class RecipeControllerTest {
                 .andExpect(view().name("404error"));
     }
 
+    @Ignore
     @Test
     public void testGetRecipeNumbeFormateException() throws  Exception {
         mockMvc.perform(get("/recipe/asdf/show"))
