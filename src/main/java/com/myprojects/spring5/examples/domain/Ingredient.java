@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 public class Ingredient {
 
-    @Id
+//    @Id
     private String id = UUID.randomUUID().toString();
     private String description;
     private BigDecimal amount;
@@ -19,7 +19,7 @@ public class Ingredient {
     @DBRef
     private UnitOfMeasure uom;
 
-    private Recipe recipe;
+//    private Recipe recipe;
 
     public Ingredient() {
 
